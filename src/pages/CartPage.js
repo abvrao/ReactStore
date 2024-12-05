@@ -45,7 +45,7 @@ const CartPage = ({ cart, updateCart, removeFromCart }) => {
                 </button>
               </div>
               <div>
-                <p>Total: ${(item.price * item.quantity).toFixed(2)}</p>
+                <p>Total: Rs.{(item.price * item.quantity * 85).toFixed(0)}</p>
                 <button
                   onClick={() => removeFromCart(item.id)}
                   className="text-red-600 hover:underline"
@@ -56,9 +56,9 @@ const CartPage = ({ cart, updateCart, removeFromCart }) => {
             </div>
           ))}
           <div className="text-right">
-            <p className="font-bold">Total: ${totalPrice.toFixed(2)}</p>
+            <p className="font-bold">Total: Rs.{(totalPrice * 85).toFixed(0)}</p>
             <p className="text-green-600 font-bold">
-              Discounted Total: ${discountedPrice.toFixed(2)}
+              Discounted Total: Rs.{(discountedPrice *85).toFixed(0)}
             </p>
           </div>
         </div>
