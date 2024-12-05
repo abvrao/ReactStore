@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+<Link
+  to = "/cart"
+  className="text-lg bg-blue-500 px-4 py-2 rounded hover:bg-blue-600"
+>
+  Cart ({cart.reduce((sum, item) => sum + item.quantity, 0)})
+</Link>
+
